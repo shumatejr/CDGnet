@@ -7,15 +7,16 @@ library(igraph)
 library(kableExtra)
 library(knitr)
 library(dplyr)
-library(rDGIdb)
+#library(rDGIdb)
 library(networkViz)
 library(shinyjs)
 
-load("../data/database_inputs_to_app.RData")
-load("../data/KEGG_cancer_paths_onc_long.RData") ##this file is not provided
+load("../objs/KEGG_inputs_to_app.RData")
+load("../objs/KEGG_cancer_paths_onc_long.RData") ##this file is not provided
+load("../objs/example_CDGnet_database_inputs.RData")
 
 ##rename KEGG_cancer_paths_onc_long to Onc_df
-Onc_df <- KEGG_cancer_paths_onc_long 
+Onc_df <- KEGG_cancer_paths_onc 
 
 source("../code/functions.R")
 
@@ -53,7 +54,7 @@ ui <- fluidPage(
       fileInput(
         "file_MP",
         "Input tsv or csv file with molecular alterations",
-        accept = c(".tsv", "csv")
+        accept = c(".tsv", ".csv")
       ),
       helpText("If a file is not uploaded, an example profile is loaded into the app."),
       tableOutput("MP_data"),
@@ -212,8 +213,9 @@ server <- function(input, output, session) {
     ##standardize gene names from MP
     if (ncol(MP) > 1)
     {
-      id2id <- gene_names_standard(as.character(MP$Gene_protein))
-      MP$Gene_protein <- id2id[MP$Gene_protein]
+      # id2id <- gene_names_standard(as.character(MP$Gene_protein))
+      #id2id <- as.character(MP$Gene_protein)
+      #MP$Gene_protein <- id2id[MP$Gene_protein]
     }
     
     MP

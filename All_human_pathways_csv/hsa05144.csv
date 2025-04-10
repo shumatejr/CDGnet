@@ -1,0 +1,8 @@
+"","from","to","type","subtype"
+"1","HGF","MET","PPrel","activation"
+"2","TLR9","MYD88","PPrel","activation"
+"3","TLR2","MYD88","PPrel","activation"
+"4","TLR4","MYD88","PPrel","activation"
+"5","ITGAL","ICAM1","PPrel","binding/association"
+"6","ITGB2","ICAM1","PPrel","binding/association"
+"7","CD40LG","CD40","PPrel","binding/association"

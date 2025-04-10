@@ -1,0 +1,7 @@
+"","from","to","type","subtype"
+"1","GLS2","GLUD1","ECrel","compound"
+"2","GLS2","GLUD2","ECrel","compound"
+"3","GLS","GLUD1","ECrel","compound"
+"4","GLS","GLUD2","ECrel","compound"
+"5","MDH1","PCK1","ECrel","compound"
+"6","MDH1","PCK2","ECrel","compound"

@@ -1,36 +1,38 @@
 ##function that maps to various attributes
-source("http://michael.hahsler.net/SMU/ScientificCompR/code/map.R")
+#source("http://michael.hahsler.net/SMU/ScientificCompR/code/map.R")
+source("http://michael.hahsler.net/SMU/LearnROnYourOwn/code/map.R")
 ##see also http://michael.hahsler.net/SMU/LearnROnYourOwn/code/igraph.html for examples
 
 ##function that inputs a list of genes and outputs a vector matching the names to the standardized names
 ##for the genes that were matched up using DGI (and just returns the original names for the ones that were not)
 gene_names_standard <- function(genes)
 {
-  stg <- searchTermSummary(queryDGIdb(genes))
-  ##make list with standardized gene names as names, initial gene names as entries
-  gene_names_list <- as.list(as.character(stg$SearchTerm))
-  names(gene_names_list) <- as.character(stg$Matches)
-  ##now split on comma
-  gene_names_sep_list <- lapply(gene_names_list, 
-                                function(g){strsplit(g,", ")[[1]]})
-  ##now create vector for id matching
-  ##first repeat the standard names the correct number of times
-  stand_names <- rep(names(gene_names_sep_list), sapply(gene_names_sep_list, length))
-  name2stand_name <- stand_names
-  names(name2stand_name) <- unlist(gene_names_sep_list)
-  
-  ##now print out all the genes that do not get mapped to standard names
-  print("Genes that do not get mapped to standard names:")
-  not_mapped <- setdiff(genes, names(name2stand_name))
-  print(not_mapped)
-  ##remove NA
-  not_mapped <- not_mapped[!is.na(not_mapped)]
-  
-  ##for all these genes, add in the IDs at the end (except for NAs)    
-  name2stand_name <- c(name2stand_name, not_mapped)
-  names(name2stand_name) <- c(unlist(gene_names_sep_list), not_mapped)
-  
-  name2stand_name
+  # stg <- searchTermSummary(queryDGIdb(genes))
+  # ##make list with standardized gene names as names, initial gene names as entries
+  # gene_names_list <- as.list(as.character(stg$SearchTerm))
+  # names(gene_names_list) <- as.character(stg$Matches)
+  # ##now split on comma
+  # gene_names_sep_list <- lapply(gene_names_list,
+  #                               function(g){strsplit(g,", ")[[1]]})
+  # ##now create vector for id matching
+  # ##first repeat the standard names the correct number of times
+  # stand_names <- rep(names(gene_names_sep_list), sapply(gene_names_sep_list, length))
+  # name2stand_name <- stand_names
+  # names(name2stand_name) <- unlist(gene_names_sep_list)
+  # 
+  # ##now print out all the genes that do not get mapped to standard names
+  # print("Genes that do not get mapped to standard names:")
+  # not_mapped <- setdiff(genes, names(name2stand_name))
+  # print(not_mapped)
+  # ##remove NA
+  # not_mapped <- not_mapped[!is.na(not_mapped)]
+  # 
+  # ##for all these genes, add in the IDs at the end (except for NAs)
+  # name2stand_name <- c(name2stand_name, not_mapped)
+  # names(name2stand_name) <- c(unlist(gene_names_sep_list), not_mapped)
+  # 
+  # name2stand_name
+  return(genes)
 }
 
 ##function that adds other genes to the molecular profiling (MP) data frame

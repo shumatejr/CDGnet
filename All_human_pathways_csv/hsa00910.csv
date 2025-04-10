@@ -1,0 +1,6 @@
+"","from","to","type","subtype"
+"1","CPS1","GLUD1","ECrel","compound"
+"2","CPS1","GLUD2","ECrel","compound"
+"3","CPS1","GLUL","ECrel","compound"
+"4","GLUD1","GLUL","ECrel","compound"
+"5","GLUD2","GLUL","ECrel","compound"

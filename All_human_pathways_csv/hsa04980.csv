@@ -1,0 +1,9 @@
+"","from","to","type","subtype"
+"1","TCN2","CD320","PPrel","binding/association"
+"2","CD320","TCN2","PPrel","binding/association"
+"3","ZNF76","HCFC1","PPrel","binding/association"
+"4","ZNF76","THAP11","PPrel",NA
+"5","ZNF143","HCFC1","PPrel","binding/association"
+"6","ZNF143","THAP11","PPrel",NA
+"7","HCFC1","MMACHC","GErel","expression"
+"8","MMAA","MMUT","PPrel","binding/association"

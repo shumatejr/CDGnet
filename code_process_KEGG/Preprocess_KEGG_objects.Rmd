@@ -9,47 +9,50 @@ knitr::opts_chunk$set(echo = TRUE, warning = TRUE)
 ```
 
 Load libraries:
+
 ```{r libs}
 library(knitr)
 library(dplyr)
 ```
 
 Source functions:
+
 ```{r source}
 source("../code/functions.R")
 ```
 
-The input objects still needed to have a ton of processing - am doing this here and just loading results to the shiny app. 
-Load files:
+The input objects still needed to have a ton of processing - am doing this here and just loading results to the shiny app. Load files:
+
 ```{r load}
-load("KEGG_cancer_paths_onc_long_stand.RData")
-load("list_paths_KEGG_stand.RData")
+load("../objs/KEGG_cancer_paths_onc_long.RData")
+load("../objs/list_paths_KEGG.RData")
 ```
 
 Do preprocessing:
+
 ```{r process}
 ##change a couple of the pathway names in KEGG to be more recognizable
-KEGG_cancer_paths_onc_long$Name <-
-  as.character(KEGG_cancer_paths_onc_long$Name)
+KEGG_cancer_paths_onc$Name <-
+  as.character(KEGG_cancer_paths_onc$Name)
 
-KEGG_cancer_paths_onc_long <- KEGG_cancer_paths_onc_long %>%
-  mutate(Name = 
-           replace(Name, 
-                   Name == "Glioma",
-                   "Glioblastoma"))
-KEGG_cancer_paths_onc_long <- KEGG_cancer_paths_onc_long %>%
-  mutate(Name = 
-           replace(Name, 
-                   Name == "Urothelial carcinoma",
-                   "Bladder cancer"))
+# KEGG_cancer_paths_onc_long <- KEGG_cancer_paths_onc_long %>%
+#   mutate(Name = 
+#            replace(Name, 
+#                    Name == "Glioma",
+#                    "Glioblastoma"))
+# KEGG_cancer_paths_onc_long <- KEGG_cancer_paths_onc_long %>%
+#   mutate(Name = 
+#            replace(Name, 
+#                    Name == "Urothelial carcinoma",
+#                    "Bladder cancer"))
 ##for some reason, "Gastric cancer" did not get downloaded - take it out!
-KEGG_cancer_paths_onc_long <- KEGG_cancer_paths_onc_long %>%
-  filter(Name != "Gastric cancer")
+# KEGG_cancer_paths_onc_long <- KEGG_cancer_paths_onc_long %>%
+  # filter(Name != "Gastric cancer")
 
 ##take subset of KEGG pathways that only correspond to cancer pathways AND
 ##make the list of KEGG pathways to have as the keys the pathway names NOT the pathway IDs
 ##first make an id2name vector
-KEGG_unique_paths <- unique(KEGG_cancer_paths_onc_long[,1:2])
+KEGG_unique_paths <- unique(KEGG_cancer_paths_onc[,1:2])
 KEGG_path_id2name <- as.character(KEGG_unique_paths$Name)
 names(KEGG_path_id2name) <- as.character(KEGG_unique_paths$KEGG_id)
 ##take subset of KEGG pathways that are ONLY cancer pathways
@@ -58,9 +61,10 @@ names(list_paths_KEGG) <- KEGG_path_id2name[names(list_paths_KEGG)]
 ```
 
 Save all these objects in a file:
+
 ```{r save}
 ##first change name of oncogene data frame
-KEGG_oncogenes <- KEGG_cancer_paths_onc_long
+KEGG_oncogenes <- KEGG_cancer_paths_onc
 
 save(list=c("KEGG_oncogenes",
             "list_paths_KEGG"),
@@ -68,6 +72,7 @@ save(list=c("KEGG_oncogenes",
 ```
 
 Session info:
+
 ```{r}
 sessionInfo()
 ```

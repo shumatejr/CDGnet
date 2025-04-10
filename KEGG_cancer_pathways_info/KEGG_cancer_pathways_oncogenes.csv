@@ -1,0 +1,82 @@
+KEGG_id,Name,Oncogene
+hsa05210,Colorectal cancer,CTNNB1
+hsa05210,Colorectal cancer,KRAS
+hsa05212,Pancreatic cancer,KRAS
+hsa05212,Pancreatic cancer,ERBB2
+hsa05225,Hepatocellular carcinoma,MYC
+hsa05225,Hepatocellular carcinoma,TERT
+hsa05225,Hepatocellular carcinoma,CTNNB1
+hsa05225,Hepatocellular carcinoma,NFE2L2
+hsa05225,Hepatocellular carcinoma,MET
+hsa05225,Hepatocellular carcinoma,PIK3CA
+hsa05226,Gastric cancer,TERT
+hsa05226,Gastric cancer,ERBB2
+hsa05226,Gastric cancer,KRAS
+hsa05226,Gastric cancer,NRAS
+hsa05226,Gastric cancer,CCNE1
+hsa05226,Gastric cancer,CCNE2
+hsa05226,Gastric cancer,MET
+hsa05226,Gastric cancer,FGFR2
+hsa05214,Glioma,EGFR
+hsa05214,Glioma,MDM2
+hsa05214,Glioma,PDGFA
+hsa05214,Glioma,PDGFB
+hsa05214,Glioma,PDGFRA
+hsa05214,Glioma,PDGFRB
+hsa05214,Glioma,CDK4
+hsa05216,Thyroid cancer,RET
+hsa05216,Thyroid cancer,CCDC6
+hsa05216,Thyroid cancer,NCOA4
+hsa05216,Thyroid cancer,TFG
+hsa05216,Thyroid cancer,NTRK1
+hsa05216,Thyroid cancer,TPM3
+hsa05216,Thyroid cancer,TPR
+hsa05216,Thyroid cancer,BRAF
+hsa05216,Thyroid cancer,HRAS
+hsa05216,Thyroid cancer,KRAS
+hsa05216,Thyroid cancer,NRAS
+hsa05216,Thyroid cancer,PPARG
+hsa05216,Thyroid cancer,PAX8
+hsa05216,Thyroid cancer,CTNNB1
+hsa05221,Acute myeloid leukemia,KIT
+hsa05221,Acute myeloid leukemia,FLT3
+hsa05221,Acute myeloid leukemia,KRAS
+hsa05221,Acute myeloid leukemia,NRAS
+hsa05221,Acute myeloid leukemia,RUNX1
+hsa05221,Acute myeloid leukemia,RUNX1T1
+hsa05221,Acute myeloid leukemia,PML
+hsa05221,Acute myeloid leukemia,RARA
+hsa05221,Acute myeloid leukemia,ZBTB16
+hsa05220,Chronic myeloid leukemia,BCR
+hsa05220,Chronic myeloid leukemia,ABL1
+hsa05220,Chronic myeloid leukemia,MECOM
+hsa05220,Chronic myeloid leukemia,RUNX1
+hsa05217,Basal cell carcinoma,SHH
+hsa05217,Basal cell carcinoma,SMO
+hsa05218,Melanoma,BRAF
+hsa05218,Melanoma,NRAS
+hsa05218,Melanoma,CDK4
+hsa05218,Melanoma,MITF
+hsa05211,Renal cell carcinoma,MET
+hsa05211,Renal cell carcinoma,PRCC
+hsa05211,Renal cell carcinoma,TFE3
+hsa05219,Bladder cancer,HRAS
+hsa05219,Bladder cancer,FGFR3
+hsa05215,Prostate cancer,AR
+hsa05215,Prostate cancer,TMPRSS2
+hsa05215,Prostate cancer,ERG
+hsa05215,Prostate cancer,ETV5
+hsa05213,Endometrial cancer,KRAS
+hsa05213,Endometrial cancer,CTNNB1
+hsa05213,Endometrial cancer,ERBB2
+hsa05224,Breast cancer,FGFR1
+hsa05224,Breast cancer,PIK3CA
+hsa05224,Breast cancer,CCND1
+hsa05222,Small cell lung cancer,MYC
+hsa05223,Non-small cell lung cancer,KRAS
+hsa05223,Non-small cell lung cancer,EGFR
+hsa05223,Non-small cell lung cancer,MET
+hsa05223,Non-small cell lung cancer,ALK
+hsa05223,Non-small cell lung cancer,EML4
+hsa05223,Non-small cell lung cancer,KIF5B
+hsa05223,Non-small cell lung cancer,RET
